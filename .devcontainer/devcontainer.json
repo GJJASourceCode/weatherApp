@@ -14,5 +14,7 @@
                  "dart-code.flutter"  
              ] 
          } 
-     }
+     },
+     "postCreateCommand": "sudo chown -R $USER /flutter",
+     "forwardPorts": [3000]
  }
