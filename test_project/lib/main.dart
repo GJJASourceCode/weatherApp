@@ -3,17 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 void main() {
-  runApp(WeatherApp());
+  runApp(const WeatherApp());
 }
 
 class WeatherApp extends StatefulWidget {
+  const WeatherApp({super.key});
+
   @override
   _WeatherAppState createState() => _WeatherAppState();
 }
 
 class _WeatherAppState extends State<WeatherApp> {
-  String _apiKey = 'YOUR_ACCUWEATHER_API_KEY';
-  String _locationKey = 'YOUR_LOCATION_KEY';
+  final String _apiKey = 'mJRBQb1ACnfWYwaVo0dGNximVG6LVEo9';
+  final String _locationKey = '3429990';
   String _weather = '';
 
   @override
@@ -41,25 +43,25 @@ class _WeatherAppState extends State<WeatherApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Weather App'),
+          title: const Text('Weather App'),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
+              const Icon(
                 Icons.cloud,
                 size: 100,
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 'Current Weather:',
                 style: TextStyle(fontSize: 24),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 _weather,
-                style: TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18),
               ),
             ],
           ),
